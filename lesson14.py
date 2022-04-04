@@ -1,17 +1,11 @@
-numm = int(input('число:'))
-degree = int(input('степень:'))
+import platform
+import sys
 
 
-def power(a, n):
-    global numm
+info = 'OS info is \n{}\n\nPython version is {} {}'.format(
+    platform.uname(),
+    sys.version,
+    platform.architecture(),
+)
 
-    n = n - 1 if (n > 0) else n + 1
-    if (n != 0):
-        numm *= a
-        power(a, n)
-    else:
-        print('Рекурсия закончилась!')
-
-
-power(numm, degree)
-print(numm)
+print(info)
