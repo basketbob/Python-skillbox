@@ -1,4 +1,4 @@
-def is_simmetria(list):
+def is_symmetric(list):
     new_list = []
     for v in list[::-1]:
         new_list.append(v)
@@ -12,7 +12,7 @@ len_list = len(list)
 answer = []
 print('old list: ', list)
 for i in range(len_list):
-    if (is_simmetria(list[i:len_list])):
+    if (is_symmetric(list[i:len_list])):
         answer = list[0:i]
         list.extend(answer[::-1])
         break
